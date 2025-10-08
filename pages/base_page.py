@@ -11,7 +11,7 @@ class BasePage:
     def visit(self, url: str):
         self.driver.get(url)
 
-    def click(self, locator: tuple[By, str]):
+    def click(self, locator):
         WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(locator))
         self.driver.find_element(*locator).click()
 

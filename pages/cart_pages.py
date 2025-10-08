@@ -5,6 +5,8 @@ from selenium.webdriver.common.by import By
 class Pago(BasePage):
     b_pago = (By.XPATH,"//button[text()='Proceder al pago']")
 
+
+
     def __init__(self, driver):
         super().__init__(driver)
 

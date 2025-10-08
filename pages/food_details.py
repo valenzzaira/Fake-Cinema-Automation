@@ -8,5 +8,7 @@ class CompraComida(BasePage):
     def agregar_al_carrito(self):
         self.click(self.AgregarBtn)
 
+    def click_pago_comida(self):
+        self.click(self.food_payment_bttn)
 
 
