@@ -36,14 +36,18 @@ Antes de ejecutar los tests, asegúrate de tener instalado:
    ```bash
    git clone https://github.com/valenzzaira/Fake-cinema-automation.git
 
-##Estructura del proyecto
    Fake-cinema-automation/
-├── pages/           # Clases POM con métodos reutilizables
-├── tests/           # Casos de prueba automatizados
-├── features/        # Archivos .feature para BDD
-├── conftest.py      # Fixtures globales
-├── requirements.txt # Dependencias
-└── README.md
-
+├── pages/               # Clases POM con métodos reutilizables por página
+│   ├── base_page.py     # Métodos comunes (click, input, waits, asserts)
+│   └── food_page.py     # Acciones específicas de la selección de alimentos
+│
+├── tests/               # Casos de prueba automatizados
+│   ├── test_food_flow.py  # Validación completa del flujo de alimentos
+│   └── conftest.py        # Fixtures globales para setup/teardown
+│
+├── features/            # Archivos .feature para pruebas BDD (si aplica)
+│   └── food_selection.feature
+│
+├── requirements.txt     # Lista de dependencias
+└── README.md            # Documentación del proyecto
    
-   cd Fake-cinema-automation
